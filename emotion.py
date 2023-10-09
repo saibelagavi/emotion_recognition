@@ -8,12 +8,12 @@ import os
 train_datagen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1/255)
 validation_datagen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1/255)
 
-train_dataset = train_datagen.flow_from_directory('C:/Users/hp/ml_internship/viewpoint/basedata/training',
+train_dataset = train_datagen.flow_from_directory('basedata/training',
                                                   target_size=(200, 200),
                                                   batch_size=3,
                                                   class_mode='binary')
 
-validation_dataset = validation_datagen.flow_from_directory('C:/Users/hp/ml_internship/viewpoint/basedata/validation',
+validation_dataset = validation_datagen.flow_from_directory('basedata/validation',
                                                             target_size=(200, 200),
                                                             batch_size=3,
                                                             class_mode='binary')
